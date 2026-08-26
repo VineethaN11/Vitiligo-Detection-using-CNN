@@ -1,0 +1,116 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', Helvetica, sans-serif;
+  }
+  
+  /* Body Styles */
+  body {
+    background: linear-gradient(135deg, #7e2ab6, #cf17c6);
+    min-height: 100vh;
+    animation: bgAnimation 6s ease-in-out infinite;
+    color: #333;
+    transition: background 0.5s ease-in-out;
+  }
+  
+  /* Background Animation */
+  @keyframes bgAnimation {
+    0% {
+      background: linear-gradient(135deg, #1997b6cc, #072636);
+    }
+    50% {
+      background: linear-gradient(135deg,  #1997b6cc, #072636);
+    }
+    100% {
+      background: linear-gradient(135deg, #1997b6cc, #072636);
+    }
+  }
+  
+  /* Header Style */
+  header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* General Container */
+  .container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Input Styles */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"],
+  input[type="number"],
+  select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input[type="text"]:hover,
+  input[type="email"]:hover,
+  input[type="password"]:hover {
+    border-color: #007bff;
+  }
+  
+  /* Button Styling */
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    input,
+    button {
+      padding: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      max-width: 90%;
+    }
+  }
+  

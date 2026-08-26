@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}Upload Image{% endblock %}
+
+{% block content %}
+  <div style="max-width: 500px; margin: 30px auto; padding: 20px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); animation: fadeIn 1s ease-in-out;">
+    <h3 style="text-align:center; margin-bottom: 20px; color: #555; transition: color 0.3s ease;" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='#555'">Upload Image for Detection</h3>
+    <form method="POST" enctype="multipart/form-data" style="display: flex; flex-direction: column; align-items: center;">
+      
+      <!-- File Input -->
+      <label for="image" style="font-size: 14px; color: #555; margin-bottom: 10px;">Choose an image to upload:</label>
+      <input type="file" name="image" id="image" required style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; transition: border 0.3s ease;" onfocus="this.style.border='1px solid #007bff'" onblur="this.style.border='1px solid #ccc'">
+
+      <!-- Submit Button -->
+      <button type="submit"
+              style="margin-top: 20px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; transition: transform 0.2s ease, background-color 0.3s ease;"
+              onmouseover="this.style.transform='scale(1.1)'; this.style.backgroundColor='#0056b3'"
+              onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='#007bff'">
+        Upload
+      </button>
+    </form>
+  </div>
+
+  <!-- CSS Animations -->
+  <style>
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Hover effect for the button */
+    button:hover {
+      transform: scale(1.1);
+      background-color: #0056b3;
+    }
+
+    /* Input hover effect */
+    input:hover,
+    input:focus {
+      border-color: #007bff;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      div {
+        padding: 15px;
+      }
+
+      input,
+      button {
+        padding: 8px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      div {
+        max-width: 90%;
+      }
+    }
+  </style>
+{% endblock %}
